@@ -20,6 +20,17 @@ export class AuthService {
 
   constructor() { }
 
+  build_logout_link(callbackPath = '') {
+    let link = 'https://';
+    //this.logout();
+    
+    link += this.url + '.auth0.com';
+    link += '/v2/logout?';
+    link += 'client_id=' + this.clientId + '&';
+    link += 'returnTo=http://localhost:8100/tabs/drink-menu';
+    return link;
+  }
+
   build_login_link(callbackPath = '') {
     let link = 'https://';
     link += this.url + '.auth0.com';
@@ -72,6 +83,7 @@ export class AuthService {
     this.token = '';
     this.payload = null;
     this.set_jwt();
+    
   }
 
   can(permission: string) {
