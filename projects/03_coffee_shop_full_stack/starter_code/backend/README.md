@@ -65,11 +65,14 @@ The `--reload` flag will detect file changes and restart the server automaticall
    - `post:drinks`
    - `patch:drinks`
    - `delete:drinks`
-6. Create new roles for:
+6. Created roles and users to use when testing:
    - Barista
      - can `get:drinks-detail`
+     - Account Login Infos : lehbib@agrineq.mr/GooglE2013##
    - Manager
      - can perform all actions
+     - Account Login Infos : devexpress2013@gmail.com/GooglE2013$$
+
 7. Test your endpoints with [Postman](https://getpostman.com).
    - Register 2 users - assign the Barista role to one and Manager role to the other.
    - Sign into each account and make note of the JWT.
